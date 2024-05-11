@@ -16,7 +16,7 @@ const features = [
 
 const FeatureSection = () => {
     return (
-        <div>
+        <div id="feature">
             <div className="mt-24">
                 <h1 className="flex justify-center text-3xl font-bold md:text-5xl">Our Feature</h1>
                 <p className="flex justify-center">Fitur Hidroponik Kami</p>
