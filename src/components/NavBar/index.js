@@ -1,41 +1,12 @@
 'use client'
 
-import React, { useEffect, useState } from "react";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-import {useRouter} from "next/navigation";
-import { app } from "../../../config.js";
+import React, { useState, useEffect } from "react";
 import links from "./links";
 import NavLink from "./NavLink";
 import Image from 'next/image'
 import hydrohealthLogo from "../../../src/img/hydrohealthImg3.png";
 
-function NavBar() {
-  const auth = getAuth();
-    const router = useRouter();
-    const [user, setUser] = useState(null);
-    
-
-    useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setUser(user);
-            } else {
-                router.push("/");
-            }
-        });
-
-        return () => unsubscribe();
-    }, [user, router]);
-
-    const handleLogout = async () => {
-        try {
-            await signOut(auth);
-            router.push("/");
-        } catch (error) {
-            console.error("Error signing out:", error.message);
-        }
-    };
-
+const NavBar = () => {
   const [isClick, setClick] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
 
