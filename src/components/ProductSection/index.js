@@ -23,7 +23,9 @@ const ProductSection = () => {
                 {products.map((product) => (
                     <div key={product.id} className="bg-white shadow-lg rounded-lg overflow-hidden">
                         <div className="relative w-full h-56 lg:h-80">
-                            <Image src={product.image} alt={product.name} fill="fill" cover="cover" />
+                            <Image src={product.image} alt={product.name} fill="fill" cover="cover" 
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            />
                         </div>
                         <div className="p-4">
                             <h2 className="text-lg font-semibold">{product.name}</h2>

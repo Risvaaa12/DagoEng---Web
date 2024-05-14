@@ -72,6 +72,6 @@ const ContactSection = () => {
             </div>
         </div>
     );
-};
+}
 
 export default ContactSection;

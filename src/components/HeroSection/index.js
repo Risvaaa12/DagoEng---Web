@@ -8,7 +8,7 @@ import dagoImg from '../../../src/img/dago.png'
 
 const HeroSection = () => {
     return (
-        <div className="grid grid-cols-1 gap-2 px-2 py-24 lg:grid-cols-3 md:grid-cols-2 lg:gap-4 auto-fit">
+        <div className="z-10 grid grid-cols-1 gap-2 px-2 py-24 lg:grid-cols-3 md:grid-cols-2 lg:gap-4 auto-fit">
             <div className="ml-6 lg:ml-16 ">
                 <h1 className="text-3xl font-bold lg:text-5xl">Collaboration</h1>
                 <div className="flex p-4 ml-4 pl-0 lg:pl-6">
